@@ -6,12 +6,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 "Plug 'zxqfl/tabnine-vim'  
 Plug 'vim-airline/vim-airline'
-Plug 'roxma/nvim-completion-manager'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'dense-analysis/ale'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+
 call plug#end()
 
 
@@ -30,6 +34,8 @@ colorscheme onedark
 set hidden
 set number
 
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
 nnoremap <c-p> :NERDTree<cr>
 
