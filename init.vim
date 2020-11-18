@@ -38,7 +38,7 @@ let g:ale_fixers = {
 
 
 let g:deoplete#enable_at_startup = 1
-colorscheme dracula
+colorscheme onedark
 set hidden
 set number
 
