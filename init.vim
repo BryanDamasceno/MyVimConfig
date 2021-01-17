@@ -16,10 +16,13 @@ Plug 'dense-analysis/ale'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
+set termguicolors
 
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
 
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
