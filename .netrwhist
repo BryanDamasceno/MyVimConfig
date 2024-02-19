@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
-let g:netrw_dirhist_6='/home/bryan/Desktop/recanto-pousada/src'
-let g:netrw_dirhist_5='/home/bryan/Desktop/recanto-pousada'
-let g:netrw_dirhist_4='/home/bryan/Desktop/recanto-pousada/src/Components/HeroSection'
-let g:netrw_dirhist_3='/home/bryan/Desktop/recanto-pousada/src/Components'
-let g:netrw_dirhist_2='/home/bryan/Desktop/recanto-pousada/src'
-let g:netrw_dirhist_1='/home/bryan/Desktop/recanto-pousada'
