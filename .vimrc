@@ -15,6 +15,7 @@ Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'sainnhe/everforest'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'preservim/nerdtree'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -40,10 +41,11 @@ inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
 
-"Terminal map
+"====================Terminal Settings===================
+
 nnoremap <C-T> :botright terminal<CR>
-"terminal settings
 set termwinsize=8x0
+hi Terminal guibg=NONE ctermbg=NONE guifg=blue
 
 
 "====================NERDTree Settings===================
@@ -56,7 +58,7 @@ set encoding=UTF-8
 "let g:webdevicons_enable = 1
 set guifont=Hack\ Nerd\ Font\ 15
 let &guicursor = substitute(&guicursor, 'n-v-c:', '&blinkon0-', '')
-
+let g:NERDTreeWinPos = "right"
 
 "====================Python files config===================
 au BufNewFile,BufRead *.py
@@ -67,6 +69,8 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+let g:jedi#force_py_version = 3
 
 "====================Powerline config===================
 
@@ -82,3 +86,18 @@ set ts=2
 set sw=2
 set et
 set ai
+
+"====================HTML files config===================
+
+autocmd FileType html 
+set omnifunc=htmlcomplete#CompleteTags
+
+inoremap <div> <div></div><Esc>ha
+inoremap <h1>  <h1></h1><Esc>ha
+inoremap <h2>  <h2></h2><Esc>ha
+inoremap <h3>  <h3></h3><Esc>ha
+inoremap <p>   <p></p><Esc>ha
+inoremap <body> <body></body><Esc>ha
+
+
+
